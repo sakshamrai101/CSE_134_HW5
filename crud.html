@@ -4,23 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Card Example</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>CRUD-To-Do List</title>
+    <link rel="stylesheet" href="crud_styles.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="buttons">
-            <button id="loadLocal">Load Local</button>
-            <button id="loadRemote">Load Remote</button>
-        </div>
-        <div id="cardContainer"></div>
+        <h1>World's Worst To-Do List <br>:(</h1>
+        <form id="todoForm">
+            <input type="text" id="task" placeholder="Enter a task...">
+            <button type="submit">Add</button>
+        </form>
+        <ul id="todoList">
+        </ul>
     </div>
-
-    <a href="crud.html" class="crud-link">
-        <button class="animated-button">Lets CRUD-fy!</button>
-    </a>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
