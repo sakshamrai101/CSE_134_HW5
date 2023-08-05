@@ -58,7 +58,37 @@ function getStoredTasks() {
 
 function displayStoredTasks() {
     const tasks = getStoredTasks();
-    tasks.forEach(task => addTask(task));
+    tasks.forEach(task => {
+        
+        if (!isTaskDisplayed(task)) {
+            addTask(task);
+        }
+    });
+}
+
+function isTaskDisplayed(taskText) {
+    const taskElements = todoList.getElementsByTagName('span');
+    for (let i = 0; i < taskElements.length; i++) {
+        if (taskElements[i].textContent === taskText) {
+            return true;
+        }
+    }
+    return false;
+}
+function createTask(taskText) {
+    const tasks = getStoredTasks();
+    tasks.push(taskText);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+function readTasks() {
+    return getStoredTasks();
+}
+
+function updateTask(currentTaskText, updatedTaskText) {
+    const tasks = getStoredTasks();
+    const updatedTasks = tasks.map(task => (task === currentTaskText ? updatedTaskText : task));
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
 }
 
 displayStoredTasks();
