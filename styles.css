@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Comic Sans MS", cursive;;
     margin: 0;
     padding: 0;
     display: flex;
@@ -20,17 +20,25 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    padding: 5px;
+    background-color: blueviolet;
+    color: palegreen;
 }
 
-button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #007bff;
+.animated-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    font-size: 18px;
+    background-color: rebeccapurple;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 50px;
+    border-color: red;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .card {
@@ -63,4 +71,11 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+.container {
+    position: relative;
+}
+
+.animation-button:hover {
+    background-color: #0056b3;
 }
